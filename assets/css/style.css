@@ -1,61 +1,143 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:300|Oswald&display=swap');
-
-*{
+* {
     margin: 0;
     padding: 0;
     border: 0;
 }
 
-body{
+body {
     font-family: Lato;
     color: #777777;
 }
 
-h2{
+h2 {
     font-family: Oswald;
     text-transform: uppercase;
     letter-spacing: 4px;
     color: #555555;
 }
 
-#logo{
+#logo {
     float: left;
     font-size: 280%;
 }
 
-#menu{
+#menu {
     font-size: 110;
     list-style-type: none;
     letter-spacing: 4px;
     float: right
 }
 
-#logo, #menu{
+#logo,
+#menu {
     line-height: 75px;
 }
 
-#menu li{
-    float: left; /* we do this in combo with floating the #menu (ul) to the right, this sorts the menu in the correct order.*/
+#menu li {
+    float: left;
+    /* we do this in combo with floating the #menu (ul) to the right, this sorts the menu in the correct order.*/
     margin-right: 30px;
-
 }
 
-#menu a{    /* Targets the child of #menu id.*/
+#menu a {
+    /* Targets the child of #menu id.*/
     text-decoration: none;
     color: inherit;
 }
 
-#menu a:hover{  /* sudoclass - allows to change the state of a html element*/
+#menu a:hover {
+    /* sudoclass - allows to change the state of a html element*/
     border-bottom: 1px solid #777777;
 }
 
-.active{
+.active {
     border-bottom: 1px solid #777777;
 }
 
-#hero-image{
+#hero-image {
     height: 600px;
     width: 100%;
     background: url("http://codeinstitute.s3.amazonaws.com/FundamentalsProjects/HTML-CSS/main-image.png") no-repeat center center;
+    /*or...... url('../../assets/img/main-image.png') no-repeat center center;*/
+    animation-name: hero-image;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+
+#hero-outer {
+    height: 600px;
+    width: 100%;
+    overflow: hidden;
+    /* using clear: both here would result in image bleeding into header*/
+    position: relative; /* This is so child containers can fix their position relative to this parent section */
+}
+
+@keyframes hero-image {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+
+#cover-text, #cover-text h2 {
+    /*must specify to overide default h2 color */
+    color: #ffffff;
+}
+
+#cover-text {
+    /* create styling for cover text box */
+    font-size: 130%;
+    font-family: Oswald;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    width: 300px;
+    height: 200px;
+    padding-top: 40px;
+    padding-left: 10px;
     
+    background-color: rgb(241, 109, 107, .7);
+    /* handy to use rgb and also set .7 opacity here */
+    bottom: 30px;
+    /* 30px above bottom of hero image */
+    right: 150px;
+    position: absolute;
+    /* fix in position. but this alone fixes it in relation to the whole screen, we must set parent container position as relative so that this child container can set its position relative to it */
+}
+
+#club-ethos{
+    height: 600px;
+    width: 100%;
+    background-color: darkkhaki;
+}
+
+#left-about{
+    width: 33%;
+    padding-top: 30px;
+    float: left;
+    background-color: rgb(100, 43, 43);
+}
+
+#right-about{
+    width: 33%;
+    padding-top: 30px;
+    float: right;
+    background-color: chartreuse;
+}
+
+#center-about{
+    width: 33%;
+    margin: 0 auto;
+    background-color: rgb(89, 78, 138);
+}
+
+.left-about-heading{
+    width: 50%;
+    float: right;
+    line-height: 20px;
+    clear: both; /* ensures that h2 and p are aligned vertically */
+    margin-bottom: 50px;
+
 }
