@@ -110,27 +110,32 @@ h2 {
 #club-ethos{
     height: 600px;
     width: 100%;
-    background-color: darkkhaki;
+
 }
 
 #left-about{
     width: 33%;
     padding-top: 30px;
     float: left;
-    background-color: rgb(100, 43, 43);
 }
 
 #right-about{
     width: 33%;
     padding-top: 30px;
     float: right;
-    background-color: chartreuse;
+
 }
 
 #center-about{
     width: 33%;
     margin: 0 auto;
     background-color: rgb(89, 78, 138);
+}
+
+hr{
+    border-top: 1px solid #777777;
+    width: 100%;
+    margin: 5px 0;
 }
 
 .left-about-heading{
@@ -140,4 +145,20 @@ h2 {
     clear: both; /* ensures that h2 and p are aligned vertically */
     margin-bottom: 50px;
 
+}
+
+.right-about-heading{
+    width: 50%;
+    float: left;
+    line-height: 20px;
+    clear: both;
+    margin-bottom: 50px;
+}
+
+.right-about-heading h2{
+    text-align: right;
+}
+
+.right-about-heading p{
+    text-align: right;
 }
