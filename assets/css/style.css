@@ -31,6 +31,7 @@ h2 {
 
 #logo,
 #menu {
+    margin-left: 30px;
     line-height: 75px;
 }
 
@@ -225,4 +226,102 @@ footer{
     margin: 1%;
     padding: 5%;
     color: #777777;
+}
+
+#photo{
+    margin: 2px;
+    clear: both;
+    line-height: 2.5vh;
+    column-count: 4;
+    column-gap: .25vw;
+}
+
+#photo img{
+    width: 100%;
+}
+
+@media screen and (max-width: 1415px){ /* So when the screen gets to 1415px apply this media query..  i found 1415 better as it stopped distortion of times at a point*/
+    #club-ethos{
+        width: 60%;
+        margin: 0 auto; /* center */
+        height: 1200px;
+    }
+
+    #welcome {
+        padding: 30px 0;
+        margin-top: 0;
+    }
+
+    #left-about, #right-about{
+        width: 100%;
+        float: left;
+        padding: 0;
+
+    }
+
+    #center-about{
+        clear: both;
+        width: 100%;
+        float: left;
+        padding: 0;
+
+    }
+
+    hr{    /* Remove line under sub headings */
+        display: none;
+    }
+
+    #times div{
+        width: 100%;
+        clear: both;
+        height: 150%;
+        border-style: solid;
+        border-bottom-width: 1px;
+        border-bottom-color: #fff;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width:943px){
+    #menu{
+        clear: left;
+        float: left;
+        margin-left: 30px;
+        margin-bottom: 20px;
+        line-height: 25px; /* makes the space the menu lives in smaller in height */
+    }
+
+    #cover-text{
+        left: 0px;
+    }
+
+    #club-ethos{
+        width: 90%;
+        height: 1200px;
+    }
+
+    .left-about-heading, .right-about-heading{
+        width: inherit;
+    }
+
+    .left-about-heading h2, .right-about-heading h2{
+        width: 100%;
+        text-align: center;
+    }
+
+    .left-about-heading p, .right-about-heading p{
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    #photo{
+        column-count: 3;
+    }
+}
+
+
+@media screen and (max-width:800px){
+    #photo{
+        column-count: 2;
+    }
 }
