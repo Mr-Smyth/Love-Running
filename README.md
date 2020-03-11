@@ -1,4 +1,5 @@
 # Love-Running
+
 Love Running - A Responsive Website built only using CSS and HTML
 
 1.	Setup new Project repo and file structure on Git or Repl. Also setup on local VSC.
@@ -137,4 +138,7 @@ Love Running - A Responsive Website built only using CSS and HTML
 21.	Resize meeting times section:
 	a.	Made the boxes 100% wide and clear both to have them stacked.
 	b.	Added border style and removed padding.
+
+22.	Add Gallery Page
+	a. add gallery.html
 
